@@ -1,6 +1,11 @@
 name: Deploy GitHub Pages
 
+# Note: release:published does not run when the release is created by another
+# workflow using GITHUB_TOKEN (semantic-release). Deploy on push to main instead.
 on:
+  push:
+    branches:
+      - main
   release:
     types:
       - published
@@ -24,6 +29,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -32,8 +39,12 @@ jobs:
 
       - name: Inject release version into index
         run: |
-          VERSION="${{ github.event.release.tag_name }}"
-          if [ -z "$VERSION" ]; then
+          if [ "${{ github.event_name }}" = "release" ] && [ -n "${{ github.event.release.tag_name }}" ]; then
+            VERSION="${{ github.event.release.tag_name }}"
+          else
+            VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "dev")
+          fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$VERSION" = "dev" ]; then
             VERSION="manual"
           fi
           sed -i.bak "s/__TOOLS_VERSION__/$VERSION/g" index.html
