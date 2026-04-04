@@ -1,7 +1,7 @@
 {
   "name": "tools",
   "private": true,
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Public web tools collection",
   "license": "Apache-2.0",
   "scripts": {
