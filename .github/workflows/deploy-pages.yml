@@ -30,6 +30,15 @@ jobs:
         with:
           enablement: true
 
+      - name: Inject release version into index
+        run: |
+          VERSION="${{ github.event.release.tag_name }}"
+          if [ -z "$VERSION" ]; then
+            VERSION="manual"
+          fi
+          sed -i.bak "s/__TOOLS_VERSION__/$VERSION/g" index.html
+          rm -f index.html.bak
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
