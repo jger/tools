@@ -1,0 +1,19 @@
+{
+  "name": "tools",
+  "private": true,
+  "version": "0.0.0-development",
+  "description": "Public web tools collection",
+  "license": "Apache-2.0",
+  "scripts": {
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "latest",
+    "@semantic-release/commit-analyzer": "latest",
+    "@semantic-release/git": "latest",
+    "@semantic-release/github": "latest",
+    "@semantic-release/npm": "latest",
+    "@semantic-release/release-notes-generator": "latest",
+    "semantic-release": "latest"
+  }
+}
