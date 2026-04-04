@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/jger/tools/compare/v1.1.1...v1.1.2) (2026-04-04)
+
+### Bug Fixes
+
+* simplify SVG icon in index.html for improved performance and readability, multilang support, terms ([4af0ce0](https://github.com/jger/tools/commit/4af0ce0b5c5a8b603cc280b40ebe277e2f35e397))
+
 ## [1.1.1](https://github.com/jger/tools/compare/v1.1.0...v1.1.1) (2026-04-04)
 
 ### Bug Fixes
