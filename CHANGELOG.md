@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/jger/tools/compare/v1.1.0...v1.1.1) (2026-04-04)
+
+### Bug Fixes
+
+* update .gitignore and modify GitHub Pages deployment workflow ([b85bc83](https://github.com/jger/tools/commit/b85bc8399bea1cf60db97b2d27594209cd006e34))
+
 ## [1.1.0](https://github.com/jger/tools/compare/v1.0.0...v1.1.0) (2026-04-04)
 
 ### Features
