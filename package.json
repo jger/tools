@@ -14,6 +14,7 @@
     "@semantic-release/github": "latest",
     "@semantic-release/npm": "latest",
     "@semantic-release/release-notes-generator": "latest",
+    "conventional-changelog-conventionalcommits": "latest",
     "semantic-release": "latest"
   }
 }
