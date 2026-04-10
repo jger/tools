@@ -1,3 +1,9 @@
+## [1.1.3](https://github.com/jger/tools/compare/v1.1.2...v1.1.3) (2026-04-10)
+
+### Bug Fixes
+
+* improve error handling and stack trace generation in index.html ([fd878b6](https://github.com/jger/tools/commit/fd878b63d5c3df5893289ca242d3bce6a315e7f3))
+
 ## [1.1.2](https://github.com/jger/tools/compare/v1.1.1...v1.1.2) (2026-04-04)
 
 ### Bug Fixes
